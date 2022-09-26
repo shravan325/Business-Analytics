@@ -1,0 +1,56 @@
+---
+title: "Business Analytics Assignment- shravan sobhani"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+#install package required install.packages("ISLR")
+```{r}
+library("ISLR")
+```
+#import dataset
+```{r}
+data<-Carseats
+data
+```
+#summary dataset
+```{r}
+summary(data)
+```
+
+```{r}
+#Maximum value of Advertising attribute
+#import dataset
+max(Carseats$Advertising)
+```
+
+```{r}
+#IQR of price attribute
+IQR(Carseats$Price)
+```
+
+#install ggplot package
+```{r}
+library(ggplot2)
+```
+
+```{r}
+#Plot the Sales against Price
+data<-plot(Carseats$Sales,Carseats$Price,abline(Carseats$Sales,Carseats$Price))
+data
+```
+
+
+```{r}
+# correlation of the two attributes
+cor(Carseats$Price,Carseats$Sales)
+```
+
+```{r}
+#Correlation coefficients are used to measure the strength of the linear relationship between two variables,as the correlation is in negative which is -0.4449507 which have a negative relationship between the attributes.A negative correlation have an inverse relationship, which means one increases as the other decreases
+
+#(values cannot exceed 1.0 or be less than -1.0. A correlation of -1.0 indicates a perfect negative correlation, and a correlation of 1.0 indicates a perfect positive correlation)
+
+```
+
